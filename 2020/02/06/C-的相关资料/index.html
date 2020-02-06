@@ -807,5 +807,12 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="/css/search.css">
 <link rel="stylesheet" href="/css/insight.css">
     
+	<!-- 雪花特效 -->
+	<script type="text/javascript">
+		var windowwidth = $(window).width();
+		if (windowwidth > 480 ) {
+			document.write('<script type="text/javascript" src="js/src/snow2.js"><\/script>');
+		}
+	</script>
 </body>
 </html>
