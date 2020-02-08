@@ -584,42 +584,55 @@
     <div class="container">
         <div class="level">
             <div class="level-start has-text-centered-mobile">
-                <a class="footer-logo is-block has-mb-6" href="<%- url_for('/') %>">
-                <% if (logo && logo.text) { %>
-                    <%= logo.text %>
-                <% } else { %>
-                    <img src="<%- url_for(logo) %>" alt="<%= title %>" height="28">
-                <% } %>
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="ccf19881030的博客" height="28">
+                
                 </a>
                 <p class="is-size-7">
-                &copy; <%= date(new Date(), 'YYYY') %> <%= author || title %>&nbsp;
+                &copy; 2020 ccf19881030&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> & <a
                         href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
-                <% if (busuanzi) { %>
+                
                 <br>
                 <span id="busuanzi_container_site_uv">
-                <%- _p('plugin.visitor', '<span id="busuanzi_value_site_uv">0</span>') %>
+                共<span id="busuanzi_value_site_uv">0</span>个访客
                 </span>
-                <% } %>
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		<span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+                
                 </p>
             </div>
             <div class="level-end">
-            <% if (Object.keys(links).length) { %>
+            
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                <% for (let name in links) {
-                        let link = links[name]; %>
+                
                 <p class="control">
-                    <a class="button is-white <%= typeof(link) !== 'string' ? 'is-large' : '' %>" target="_blank" rel="noopener" title="<%= name %>" href="<%= url_for(typeof(link) === 'string' ? link : link.url) %>">
-                        <% if (typeof(link) === 'string') { %>
-                        <%= name %>
-                        <% } else { %>
-                        <i class="<%= link.icon %>"></i>
-                        <% } %>
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
                     </a>
                 </p>
-                <% } %>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
                 </div>
-            <% } %>
+            
             </div>
         </div>
     </div>
